@@ -1,0 +1,17 @@
+main {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  margin: 0 auto;
+}
+
+.h1_font {
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 800px) {
+  .grid_1-1-1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

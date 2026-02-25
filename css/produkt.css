@@ -1,0 +1,62 @@
+/* PRODUCT PAGE LAYOUT */
+
+main {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  margin: 0 auto;
+}
+
+.product-page {
+  display: grid;
+  gap: 40px;
+  padding: 40px 20px;
+}
+
+.product-image img {
+  width: 100%;
+  background: var(--card-var1);
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.size-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.size-form select {
+  padding: 12px;
+  font-size: 16px;
+}
+
+/* BUTTON */
+
+.add-to-basket {
+  padding: 14px;
+  background: var(--blue-var1);
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.add-to-basket:hover {
+  background: var(--blue-var3);
+  color: var(--bg-base);
+}
+
+/* DESKTOP */
+
+@media screen and (min-width: 800px) {
+  .product-page {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
