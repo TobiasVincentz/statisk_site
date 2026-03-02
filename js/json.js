@@ -13,7 +13,7 @@ function getData() {
 function showData(data) {
   //   console.log(data);
   data.forEach((category) => {
-    container.innerHTML += `<a class="category_mobile" href="produktliste.html">${category.category}</a>`;
+    container.innerHTML += `<a class="category_mobile" href="produktliste.html?category=${category.category}">${category.category}</a>`;
   });
 }
 
