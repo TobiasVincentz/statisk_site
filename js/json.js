@@ -6,14 +6,14 @@ const container = document.querySelector(".jsontest");
 
 function getData() {
   fetch(endpoint)
-    .then((fisk) => fisk.json())
+    .then((category) => category.json())
     .then(showData);
 }
 
 function showData(data) {
   //   console.log(data);
-  data.forEach((fisk) => {
-    container.innerHTML += `<a class="category_mobile" href="produktliste.html">${fisk.category}</a>`;
+  data.forEach((category) => {
+    container.innerHTML += `<a class="category_mobile" href="produktliste.html">${category.category}</a>`;
   });
 }
 
