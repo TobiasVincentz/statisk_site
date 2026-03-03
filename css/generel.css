@@ -18,6 +18,10 @@ body {
   background-color: var(--bg-base);
 }
 
+a {
+  text-decoration: none;
+}
+
 /*-------------- HEADER ----------------*/
 
 header {
@@ -274,6 +278,19 @@ header {
   font-style: normal;
   font-weight: 100;
   line-height: normal;
+}
+
+.discount {
+  background-color: #ffd500;
+  color: #000;
+  font-family: "Helvetica Neue";
+  padding: 8px 14px;
+  font-weight: 700;
+}
+
+.discounted {
+  display: flex;
+  justify-content: space-between;
 }
 
 /*-------------- FARVE VARIABLER ----------------*/

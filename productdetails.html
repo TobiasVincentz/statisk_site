@@ -11,9 +11,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/generel.css" />
-    <link rel="stylesheet" href="css/produktliste.css" />
+    <link rel="stylesheet" href="css/produkt.css" />
+    <script src="js/productdetails.js" defer></script>
     <title>FashionRUs</title>
   </head>
+
   <body>
     <header>
       <div class="logo-wrapper">
@@ -81,29 +83,35 @@
         </button>
       </nav>
     </header>
-    <main id="productContainer">
-      <figure>
-        <img
-          src="https://kea-alt-del.dk/t7/images/webp/640/1535.webp"
-          alt="Produktbillede"
-          class="productImage"
-        />
-        <span class="saleLabel"></span>
-      </figure>
-      <section class="productDetails">
-        <h2 class="productName">Unisex Logo Cap</h2>
-        <div>
-          <p class="articleType"><span class="bold">Type:</span>Caps</p>
-          <p class="productCategory">
-            <span class="bold">Kategori:</span>Accessories
-          </p>
-          <p class="productPrice"><span class="bold">Pris:</span>699,-</p>
-          <p class="stock"><span class="bold">Stock:</span>5</p>
+    <main>
+      <section class="product-page">
+        <!-- <div class="product-image">
+          <img
+            src="https://kea-alt-del.dk/t7/images/webp/640/1570.webp"
+            alt="Sports Top"
+          />
         </div>
-        <button class="buyButton">Køb nu</button>
+        <div class="product-info">
+          <h1 class="h1_font">Sports Goods</h1>
+          <p class="price">Brand: FashionRUs</p>
+          <p class="price">Color: Black</p>
+          <p class="price inventory">Item no: 1570</p>
+          <p class="price">DKK 1749,-</p>
+          <form class="size-form">
+            <label for="size" class="price inventory">SIZE</label>
+            <select id="size" name="size">
+              <option value="">Select size</option>
+              <option>S</option>
+              <option>M</option>
+              <option>L</option>
+              <option>XL</option>
+            </select>
+            <button class="add-to-basket price">Add to basket</button>
+          </form>
+        </div> -->
       </section>
     </main>
+
     <footer></footer>
-    <script src="js/burger.js"></script>
   </body>
 </html>
