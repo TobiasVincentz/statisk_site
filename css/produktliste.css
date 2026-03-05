@@ -47,20 +47,10 @@ main {
   }
 }
 
-.card-img-soldout {
-  position: relative;
-  opacity: 0.3;
+.frontpageknapper {
+  margin: 15px 0;
 }
 
-.soldout {
-  position: absolute;
-  margin: 0 auto;
-  padding: 12px 20px;
-  background-color: transparent;
-  font-size: 32px;
-  font-weight: 200;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  white-space: nowrap;
+.frontpageknapper .add-to-basket {
+  border-radius: 10px;
 }

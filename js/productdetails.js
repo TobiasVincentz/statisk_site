@@ -13,7 +13,8 @@ function showData(json) {
   //   console.log(id);
   //   console.log(endpoint);
   container.innerHTML = `
-        <div class="product-image">
+      <div class="${json.soldout && "card-img-soldout"}">
+        ${json.soldout ? `<p class="soldout"></p>` : ""}
           <img
             src="https://kea-alt-del.dk/t7/images/webp/640/${json.id}.webp"
             alt="Produkt billede"
@@ -25,6 +26,7 @@ function showData(json) {
           <p class="price">Color: ${json.colour1}</p>
           <p class="price inventory">Item no: ${json.id}</p>
           <p class="price">DKK ${json.price},-</p>
+          ${json.discount ? `<p class="discount"><span>${json.discount}%</span></p>` : ""}
           <form class="size-form">
             <label for="size" class="price inventory">SIZE</label>
             <select id="size" name="size">
@@ -34,7 +36,7 @@ function showData(json) {
               <option>L</option>
               <option>XL</option>
             </select>
-            <button class="add-to-basket price">Add to basket</button>
+            <button class="add-to-basket price ${json.soldout && "soldoutbutton"}">Add to basket</button>
           </form>
         </div>`;
 }

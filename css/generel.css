@@ -22,6 +22,9 @@ a {
   text-decoration: none;
 }
 
+article a {
+  box-shadow: 3px 2px 8px 0 rgba(0, 0, 0, 0.25);
+}
 /*-------------- HEADER ----------------*/
 
 header {
@@ -280,17 +283,43 @@ header {
   line-height: normal;
 }
 
+.soldout::before {
+  content: "SOLD OUT";
+}
+
 .discount {
   background-color: #ffd500;
   color: #000;
   font-family: "Helvetica Neue";
   padding: 8px 14px;
   font-weight: 700;
+  max-width: fit-content;
+  margin-left: auto;
 }
 
 .discounted {
   display: flex;
   justify-content: space-between;
+}
+
+.card-img-soldout {
+  position: relative;
+}
+.card-img-soldout img {
+  opacity: 0.3;
+}
+
+.soldout {
+  position: absolute;
+  margin: 0 auto;
+  padding: 12px 20px;
+  background-color: transparent;
+  font-size: 32px;
+  font-weight: 200;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
 }
 
 /*-------------- FARVE VARIABLER ----------------*/
@@ -306,4 +335,24 @@ html {
 
 .grid_1-1-1 {
   gap: 20px;
+}
+
+/* BUTTON */
+
+.add-to-basket {
+  padding: 14px;
+  background: var(--blue-var1);
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.add-to-basket:hover {
+  background: var(--blue-var3);
+  color: var(--bg-base);
+}
+
+.add-to-basket:active {
+  background-color: var(--blue-var2);
 }
