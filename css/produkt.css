@@ -13,10 +13,10 @@ main {
   padding: 40px 20px;
 }
 
-.product-image img {
+/* .product-image img {
   width: 100%;
   background: var(--card-var1);
-}
+} */
 
 .product-info {
   display: flex;
@@ -34,22 +34,6 @@ main {
 .size-form select {
   padding: 12px;
   font-size: 16px;
-}
-
-/* BUTTON */
-
-.add-to-basket {
-  padding: 14px;
-  background: var(--blue-var1);
-  border: none;
-  font-size: 18px;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.add-to-basket:hover {
-  background: var(--blue-var3);
-  color: var(--bg-base);
 }
 
 /* DESKTOP */
