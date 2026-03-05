@@ -7,8 +7,35 @@ const endpoint = `https://kea-alt-del.dk/t7/api/products?category=${klikCategory
 const container = document.querySelector(".product-list");
 
 document
-  .querySelectorAll("button")
+  .querySelectorAll("#filter button")
   .forEach((knap) => knap.addEventListener("click", filter));
+
+document
+  .querySelectorAll("#sorter button")
+  .forEach((knap) => knap.addEventListener("click", sorter));
+
+function sorter(event) {
+  console.log(event.target.dataset);
+  if (event.target.dataset.price) {
+    if (event.target.dataset.price == "acc") {
+      allData.sort((a, b) => a.price - b.price);
+    } else {
+      allData.sort((a, b) => b.price - a.price);
+    }
+  } else {
+    if (event.target.dataset.text == "az") {
+      //ELLERS sorter det alfabetisk//
+      allData.sort((a, b) =>
+        a.productdisplayname.localeCompare(b.productdisplayname, "da"),
+      );
+    } else {
+      allData.sort((a, b) =>
+        b.productdisplayname.localeCompare(a.productdisplayname, "da"),
+      );
+    }
+  }
+  showProducts(allData);
+}
 
 let allData;
 
@@ -27,6 +54,7 @@ function getData() {
     });
 }
 
+//function filtrering//
 function filter(e) {
   const valgt = e.target.textContent;
   if (valgt == "All") {
